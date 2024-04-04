@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(153, 175, 153);
+}
+table{
+    text-align: center;
+    font-family: sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+table tr td button{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: gray;
+}

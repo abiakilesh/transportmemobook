@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home page</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li><a href="admin login/admin.html">Admin</a></li>
+                <li><a href="manager login/index.html">Manager</a></li>
+                <li><a href="driver login/index.html">Driver</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="home">
+     <div class="container">
+        <div class="row">
+            <div class="home-text">
+                 <h1>TRANSPORTATION & LOGISTICS</h1>
+                 <p class="animate-text">
+                  <span>AMN Transport</span>
+                    <span> MEMO DETAILS</span>
+                    <span> TRUCK INFO</span>
+                    <span> DRIVER INFO</span>
+                    <span> MANAGER INFO</span>
+                 </p>
+            </div>
+        </div>
+     </div>
+    </div>
+ </section>
+
+
+
+<script>
+         const txts=document.querySelector(".animate-text").children,
+               txtsLen=txts.length;
+           let index=0;
+          const textInTimer=3000,
+                textOutTimer=2800;
+
+         function animateText() {
+            for(let i=0; i<txtsLen; i++){
+              txts[i].classList.remove("text-in","text-out");  
+            }
+            txts[index].classList.add("text-in");
+
+            setTimeout(function(){
+                txts[index].classList.add("text-out");              
+            },textOutTimer)
+
+            setTimeout(function(){
+
+              if(index == txtsLen-1){
+                  index=0;
+                }
+               else{
+                   index++;
+                 }
+                animateText();
+            },textInTimer); 
+         }
+         
+         window.onload=animateText;
+   
+</script>
+
+</body>
+</html>
+
+
+
+
